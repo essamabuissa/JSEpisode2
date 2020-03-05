@@ -18,7 +18,22 @@
 *       pairs() returns []
 ****************************************************************/
 function pairs(names) {
-  // Your code goes here
+  let empty_list = []
+  if(names == null){
+    return empty_list
+  }
+  else {
+    for(let i=0; names.length > 1;i++){
+      let pairs_list = [names.getRandom(),names.getRandom()]
+      empty_list.push(pairs_list)
+    }
+    if(names.length == 1 ){
+      empty_list.push(names)
+
+    }
+    return empty_list
+  }
+
 }
 
 module.exports = pairs;
